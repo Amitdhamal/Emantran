@@ -9,14 +9,19 @@ export class HomeComponent {
 
   top: any;
   left: any;
-  expand = false;
 
   constructor() { }
+  codescanned(){
+    setTimeout(() => {
+      alert('code scanned')
+    }, 200);
+  }
   @HostListener('document:mousemove', ['$event'])
   onMousemove($event: any) {
-    this.top = ($event.pageY - 10) + "px";
-    this.left = ($event.pageX - 10) + "px";
+    this.top = ($event.pageY - 140) + "px";
+    this.left = ($event.pageX - 80) + "px";
   }
+ 
 
 
 }
