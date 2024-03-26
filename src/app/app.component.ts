@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Emantran';
+  year = new Date().getFullYear()
+  redirectHome(){
+    console.log(this.year)
+  }
 }

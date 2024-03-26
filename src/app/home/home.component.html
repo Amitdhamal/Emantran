@@ -1,10 +1,22 @@
-<div class="container">
-    <div class="mobile-container d-flex justify-content-center align-items-center">
-        <div class="mobile text-center">
-            <img (mouseenter)="codescanned()" class="qr-code mt-5" src="../../assets/img/qr_code.png" alt="">
+<div class="container-fluid px-0">
+
+    <div class="container">
+        <div class="mobile-container d-flex justify-content-center align-items-center">
+            <div *ngIf="isCodeScanned" class="flip_img" (click)=" flipIt()" >
+                <img src="../../assets/img/flip_img.png" alt="">
+            </div>
+            <div class="front e-card" [ngClass]="{'flipped': flipped}">
+                <img class="img-fluid" src="../../assets/img/Card_frnt.png" alt="">
+            </div>
+            <div class="qr-code front e-card" [ngClass]="{'flipped': flipped}">
+                <img  class="img-fluid" (mouseenter)="codescanned()" src="../../assets/img/qr_code.png" alt="">
+            </div>
+            <!-- <div class="back e-card"  [ngClass]="{'flipped': flipped}">
+                <img class="img-fluid" src="../../assets/img/Card_bck.png" alt="">
+            </div> -->
         </div>
     </div>
 </div>
-<div class="cursor" [style.top]="top" [style.left]="left">
+<div  *ngIf="!isCodeScanned"  class="cursor" [style.top]="top" [style.left]="left">
     <img src="../../assets/cursors/scan_pointer.png" />
 </div>

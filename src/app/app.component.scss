@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+nav{
+    font-family: "Leckerli One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fdd0b3;
+    z-index: 2;
+}
+nav a{
+    color: #F98866;
+    font-weight: bolder;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px rgb(40, 39, 39);
+    cursor: pointer;
+}
+
+.footer{
+    position: relative;
+    color: #F98866;
+    font-weight: bold;
+    background-color: #fdd0b3;
+    z-index: 2;
+    padding: 0.7%;
+}
